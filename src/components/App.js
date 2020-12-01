@@ -8,7 +8,9 @@ import {
 import Header from "./Header";
 import Home from "./Home";
 import Play from "./Play";
+import Level from "./Level";
 import Footer from "./Footer";
+import Sidebar from "./Sidebar";
 import '../css/App.scss';
 
 function App() {
@@ -29,16 +31,17 @@ function App() {
 
     return (
          <Router>
-             <div className="wrapper">
-            <Header score={gameScore}/>
+            <div className="wrapper">
+            <Sidebar loc="left"/>
             <Switch className="main">
                 <Route path="/play">
                     <Play mine={myPick} house={housePick} score={gameScore} setScore={setGameScore} setHousePick={newHousePick}/>
                 </Route>
                 <Route path="/">
-                    <Home setPick={setMyPick} />
+                    <Level array={['printer', 'fbs', 'centrifuge']}/>
                 </Route>
             </Switch>
+            <Sidebar loc="right"/>
             <Footer />
             </div>
         </Router>

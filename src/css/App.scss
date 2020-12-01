@@ -5,10 +5,13 @@
 @import "_play";
 @import "_footer";
 @import "_modal";
+@import "_sidebar";
 
 body {
   font-family: "Barlow Semi Condensed", sans-serif;
-  background: $background-gradient;
+  background-image: url("../images/lab.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   color: white;
   letter-spacing: 1px;
   margin: 0;
